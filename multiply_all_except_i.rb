@@ -13,15 +13,15 @@ def multiply_all_but_self(input)
   i = 0
   product = 1
   output_array = []
-  while i < input.length
-    original = input[i]
-    input[i] = 1
+  input.each do |num|
+    original = num
+    num = 1
     input.each do |number|
       product *= number
     end
     output_array << product
     product = 1
-    input[i] = original
+    num = original
     i += 1
   end
   p output_array
